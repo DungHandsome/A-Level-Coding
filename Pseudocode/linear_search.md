@@ -30,8 +30,8 @@ PROCEDURE LinearSearch(arr : ARRAY OF INTEGER)
     ENDIF
 ENDPROCEDURE
 
-DECLARE mrarr : ARRAY[0:7] OF INTEGER
-mrarr ← [1,123,45,12,5,6,7,23]
-
-CALL LinearSearch(mrarr)
+//DECLARE mrarr : ARRAY[0:7] OF INTEGER
+//mrarr ← [1,123,45,12,5,6,7,23]
+//
+//CALL LinearSearch(mrarr)
 ```
