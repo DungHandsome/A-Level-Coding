@@ -1,9 +1,13 @@
-valueList = [20,30,50,40,44,60]
-leftIndex = [None,0,3, None,None,None]
-rightIndex = [None,2,5,4,None,None]
+#valueList = [20,30,50,40,44,60]
+#leftIndex = [None,0,3, None,None,None]
+#rightIndex = [None,2,5,4,None,None]
+
+valueList = [20,15,40,12,16,35,50,17]
+leftIndex = [1,3,5,None,None,None,None,None]
+rightIndex = [2,4,6,None,7,None,None,None]
 stack = []
 
-middle_number_position = 1
+middle_number_position = 0
 
 def checknone(value) -> bool:
     if value == None:
@@ -36,8 +40,7 @@ def insert(value):
         else:
             print("An error occur!")
 
-def in_order():
-    value = middle_number_position
+def in_order(value):
     if leftIndex[value] != None:
         in_order(leftIndex[value])
     stack.append(value)
@@ -56,7 +59,10 @@ def find(value) -> int:
         elif value > valueList[position]:
             position = rightIndex[position]
 
-
+in_order(middle_number_position)
+print(stack)
+for i in range(0, len(stack)):
+    print(valueList[stack[i]])
 
 #print(valueList)
 #print(leftIndex)
